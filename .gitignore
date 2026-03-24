@@ -1,0 +1,31 @@
+git init# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+.env.local
+.env.*.local
+
+# Python cache & pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+temp_uploads/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

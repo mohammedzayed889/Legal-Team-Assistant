@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LegalDesk - Case Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d97706",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-slate-950 border-r border-slate-800 flex flex-col shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 rounded flex items-center justify-center bg-black"><span class="material-symbols-outlined text-white">balance</span></div>
+<h2 class="text-white text-xl font-bold tracking-tight">LegalDesk</h2>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="main_dashboard.html">
+<span class="material-symbols-outlined transition-colors">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary text-white rounded-xl shadow-lg shadow-primary/20 transition-all justify-between" href="case_details.html" style="background-color: #d97706;">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined transition-colors">folder_open</span>
+<span class="text-sm font-semibold">Cases</span>
+</div>
+<span class="flex items-center justify-center bg-white/20 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-md min-w-[1.25rem]">3</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="documents_list.html">
+<span class="material-symbols-outlined transition-colors">description</span>
+<span class="text-sm font-semibold">Documents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="research_dashboard.html">
+<span class="material-symbols-outlined transition-colors">travel_explore</span>
+<span class="text-sm font-semibold">Research</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="settings_page.html">
+<span class="material-symbols-outlined transition-colors">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-800/50">
+<div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5">
+<div class="size-10 rounded-full bg-slate-700" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlqwDKLp0KdCVSEzek1Z9PEow11SaUOHpfQwYnQ3gF8jqt3tojJvfrJSpXcePaDvqMbklaOXRGz-7fOyYnmadr-nWnutkokg6rnynQxZhYPueq9Ev422n5y45M1KTDsbPWKy_75EEgrri_ThD8x-WQyAZbBgCjkoo27QXXjYKNDhOwWmXYb47l8WcSAnpCtza1MPkjDRdXQzB9Fhm775LX_AlWMrw-TbNer4IVek2qOXMctMGUsDZeb7CfhGbdCfcG3ltkyLoX-yg")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-white">Alex Rivera</span>
+<span class="text-xs text-slate-500">Senior Associate</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- Top Nav -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800/50 border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search case files, motions, or research notes..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-4">
+<button class="size-10 flex items-center justify-center rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- Case Header -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-slate-100">Johnson v. Digital Privacy</h1>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">potted_plant</span>
+                                Active Research
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400">Case ID: #2024-DP-1092 • Filed: Oct 10, 2023</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-xl hover:bg-slate-50">
+                            Edit Details
+                        </button>
+<form id="uploadFormCaseDetails" action="http://localhost:8000/ingest" method="POST" enctype="multipart/form-data" class="inline">
+<input type="file" id="fileInputCaseDetails" name="file" style="display: none;" onchange="document.getElementById('uploadFormCaseDetails').submit();" />
+<button type="button" onclick="document.getElementById('fileInputCaseDetails').click();" class="px-4 py-2 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary/90 shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">upload</span>
+                            Upload Files
+                        </button>
+</form>
+</div>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Documents -->
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-bold text-lg">Uploaded Documents</h3>
+<button class="text-primary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+<th class="px-6 py-3">Filename</th>
+<th class="px-6 py-3">Upload Date</th>
+<th class="px-6 py-3">Status</th>
+<th class="px-6 py-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">picture_as_pdf</span>
+<span class="text-sm font-medium">Complaint_Final.pdf</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 12, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase rounded">
+<span class="material-symbols-outlined text-[12px] leading-none">check_circle</span>
+                                                    Vectorized
+                                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:text-primary/80 material-symbols-outlined">visibility</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">description</span>
+<span class="text-sm font-medium">Privacy_Policy_v2.docx</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 14, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase rounded">
+<span class="material-symbols-outlined text-[12px] leading-none">check_circle</span>
+                                                    Vectorized
+                                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:text-primary/80 material-symbols-outlined">visibility</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500">table_chart</span>
+<span class="text-sm font-medium">Evidence_Log.xlsx</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 15, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold uppercase rounded">
+<span class="material-symbols-outlined text-[12px] animate-spin leading-none">sync</span>
+                                                    Processing
+                                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-300 cursor-not-allowed material-symbols-outlined">visibility</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Chat CTA Section -->
+<div class="bg-slate-900 rounded-2xl p-8 relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 size-48 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all"></div>
+<div class="relative z-10 flex items-center justify-between gap-8">
+<div class="space-y-4 max-w-lg">
+<h2 class="text-white text-2xl font-bold">Deep Case Intelligence</h2>
+<p class="text-slate-400 leading-relaxed">Instantly analyze your vectorized documents. Ask questions about specific clauses, identify inconsistencies, or summarize key evidence using LegalDesk AI.</p>
+<button class="flex items-center gap-3 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-black">edit_note</span>
+                                        Start AI Chat Session
+                                    </button>
+</div>
+<div class="hidden md:block">
+<div class="size-32 bg-slate-800 rounded-2xl flex items-center justify-center border border-slate-700 shadow-2xl">
+<span class="material-symbols-outlined text-6xl text-primary">chat_bubble</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Metadata & Feed -->
+<div class="space-y-6">
+<!-- Metadata Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 space-y-4">
+<h3 class="font-bold text-slate-500 text-xs uppercase tracking-wider">Case Metadata</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-400">Assigned Attorney</span>
+<span class="text-sm font-semibold">Alex Rivera</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-400">Client</span>
+<span class="text-sm font-semibold">Robert Johnson</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-400">Lead Court</span>
+<span class="text-sm font-semibold">District Court, CA</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-400">Next Deadline</span>
+<span class="text-sm font-semibold text-primary">Nov 12, 2023</span>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200" data-alt="Team member portrait 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABwLn9Cv1F523TGEvG1-t0TVWnnXmthvjRXEcp3SNITviywJsnmGUzFvAjHJdCOvgjLxLaoIDH3Or4DYchybblwIpNWfuwUMIVLMBl1M8OFlqs8WXIK4c4PygAgJMHTgkq-zb_rDCbs2dOqAkz_G0DqRf82QYmz96INvupH23afMWkF-_4lUx3e1qoYx6D9u7OviF6X3S5BXK5Xgm9JKSoxUzt_VozVl-XzPJfLXmySvhbMX9lbQSlwBRqfYUpR7oeJfSLk2weoVk")'></div>
+<div class="size-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300" data-alt="Team member portrait 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK6QbzyCIKDP5JI8C_CyJLiyNNhdHp_0x1TqWMeXGpR_AHhNbAp8zB4xlk8dCi6Fo_EuMp0kQdo-QVfHaU4VeXLmVdwh-9pl0bEBIWqWHZTYKEtpHVHt5_ItkrUre96GBSir4TT6FstadHieVDGDdquxr2xBTGa7rkPuCORYYfudx_nN8LXhZ9BLYt-FRcgoKout-A8FpvYZW8wSt-MnfwGR_-LyZCYBOvitb5LOOBUCPR_hnwDeWczdZFT-BNclB9jMD01mgAqFM")'></div>
+<div class="size-8 rounded-full border-2 border-white dark:border-slate-900 bg-primary flex items-center justify-center text-[10px] font-bold text-white uppercase">+3</div>
+</div>
+<p class="text-xs text-slate-400 mt-2">Team of 5 collaborators</p>
+</div>
+</div>
+<!-- AI Research Feed -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+<h3 class="font-bold text-lg">Recent AI Research</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-2 relative pl-6 border-l-2 border-primary/20">
+<div class="absolute -left-[5px] top-0 size-2 bg-primary rounded-full"></div>
+<p class="text-xs text-slate-400 font-medium">2 hours ago</p>
+<p class="text-sm font-semibold italic text-slate-600 dark:text-slate-300">"What are the notification requirements in California for data breaches?"</p>
+<div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-xs leading-relaxed">
+                                        Found in <span class="font-bold">CCPA § 1798.82</span>: Businesses must disclose breach without unreasonable delay...
+                                    </div>
+</div>
+<div class="space-y-2 relative pl-6 border-l-2 border-slate-200 dark:border-slate-800">
+<p class="text-xs text-slate-400 font-medium">Yesterday</p>
+<p class="text-sm font-semibold italic text-slate-600 dark:text-slate-300">"Summarize the user consent section from Privacy_Policy_v2.docx"</p>
+<div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-xs leading-relaxed">
+                                        Section 4.2 states explicit opt-in is required for sharing PII with third-party partners...
+                                    </div>
+</div>
+<button class="w-full py-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors border-t border-slate-100 dark:border-slate-800 pt-4">
+                                    View Full History
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

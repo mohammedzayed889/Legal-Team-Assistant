@@ -1,0 +1,25 @@
+# Legal AI Assistant — Phase 1: Knowledge Base Ingestion Pipeline
+
+# Core
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-openai
+langchain-community
+
+# Document loaders
+pymupdf
+docx2txt
+
+# OpenAI
+openai
+
+# Vector Store — Supabase pgvector
+supabase
+vecs
+
+# Utilities
+python-multipart

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - LegalDesk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;family=Roboto+Flex:opsz,wght@8..144,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d97706", /* Updated Amber Yellow */
+                        "navy-dark": "#0A1128", /* Deep Navy */
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "slate-custom": "#64748b"
+                    },
+                    fontFamily: {
+                        "display": ["Roboto Flex", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Roboto Flex', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(217, 119, 6, 0.15);
+            color: #d97706;
+            border-right: 4px solid #d97706;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen">
+<!-- Side Navigation -->
+<aside class="w-72 bg-navy-dark text-white flex flex-col fixed h-full z-10">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-slate-900 rounded-lg p-1.5">
+<span class="material-symbols-outlined text-white text-2xl">balance</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">LegalDesk</h1>
+<p class="text-slate-400 text-xs uppercase tracking-widest">Management System</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="main_dashboard.html">
+<span class="material-symbols-outlined transition-colors">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all justify-between" href="case_details.html">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined transition-colors">folder_open</span>
+<span class="text-sm font-semibold">Cases</span>
+</div>
+<span class="flex items-center justify-center bg-white/20 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-md min-w-[1.25rem]">3</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="documents_list.html">
+<span class="material-symbols-outlined transition-colors">description</span>
+<span class="text-sm font-semibold">Documents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="research_dashboard.html">
+<span class="material-symbols-outlined transition-colors">travel_explore</span>
+<span class="text-sm font-semibold">Research</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary text-white rounded-xl shadow-lg shadow-primary/20 transition-all justify-between" href="settings_page.html" style="background-color: #d97706;">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined transition-colors">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</div>
+</a>
+</nav>
+<div class="p-6 mt-auto border-t border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional lawyer portrait avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQsafK4Gvx3t3hqI6WXhQGD3EZNcjGtC_Zw_VLmoib6BihHaBxfJNWxM74PIqvolg1e_Yhf5HSEI7TiNciHaiqfcSoniWOC3BXlTvSNSLe-D8rmD5CDvmPeXSBSJrrv3HcP7KqyHzIuw1IM5333FMC4JTxCSdYddMdSZ1q--o8jMyKinNWcPuIppjcVvUilp4Wo0Ka57MImNHHaDBlIigIFiy27tRGXPBiDyFqFiAAc_2q3C-TzwhCHLbdIKXIpVExRrL3sjAVn5Q"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Julian Vane</p>
+<p class="text-xs text-slate-400">Senior Partner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-72 flex-1 p-10 max-w-6xl mx-auto">
+<header class="mb-8">
+<h1 class="text-4xl font-extrabold text-navy-dark dark:text-slate-100 mb-2">Settings</h1>
+<p class="text-slate-custom">Manage your account preferences and organization details.</p>
+</header>
+<!-- Tabs Navigation -->
+<div class="border-b border-slate-200 dark:border-slate-800 mb-8 overflow-x-auto">
+<div class="flex gap-8 min-w-max" id="settings-tabs">
+<button data-target="general" class="tab-btn pb-4 border-b-2 border-primary text-primary font-bold text-sm tracking-wide uppercase">General</button>
+<button data-target="profile" class="tab-btn pb-4 border-b-2 border-transparent text-slate-custom hover:text-navy-dark dark:hover:text-slate-200 font-bold text-sm tracking-wide uppercase transition-colors">Profile</button>
+<button data-target="notifications" class="tab-btn pb-4 border-b-2 border-transparent text-slate-custom hover:text-navy-dark dark:hover:text-slate-200 font-bold text-sm tracking-wide uppercase transition-colors">Notifications</button>
+<button data-target="security" class="tab-btn pb-4 border-b-2 border-transparent text-slate-custom hover:text-navy-dark dark:hover:text-slate-200 font-bold text-sm tracking-wide uppercase transition-colors">Security</button>
+<button data-target="team" class="tab-btn pb-4 border-b-2 border-transparent text-slate-custom hover:text-navy-dark dark:hover:text-slate-200 font-bold text-sm tracking-wide uppercase transition-colors">Team</button>
+</div>
+</div>
+<div class="space-y-12">
+<!-- General Section -->
+<section class="tab-section bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8" id="general">
+<div class="flex items-center gap-2 mb-6 text-navy-dark dark:text-slate-200">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+<h2 class="text-xl font-bold">General Section</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-custom">Organization Name</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" type="text" value="Vane &amp; Associates LLP"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-custom">Primary Legal Domain</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100">
+<option>Corporate Law</option>
+<option>Intellectual Property</option>
+<option>Criminal Litigation</option>
+<option>Family Law</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-custom">Time Zone</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100">
+<option>(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+<option>(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+<option>(GMT+00:00) London</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Profile Section -->
+<section class="tab-section hidden bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8" id="profile">
+<div class="flex items-center gap-2 mb-6 text-navy-dark dark:text-slate-200">
+<span class="material-symbols-outlined text-primary">person</span>
+<h2 class="text-xl font-bold">Profile Section</h2>
+</div>
+<div class="flex flex-col md:flex-row gap-10">
+<div class="flex flex-col items-center gap-4">
+<div class="relative">
+<div class="w-32 h-32 rounded-full border-4 border-slate-100 dark:border-slate-800 overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Julian Vane profile headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAViZNos53S-bKTr5cM5piNrn_hLiucKEAZ9leU5Yma40UVK7Jh1IUcZLVsZ1rTy1acUcLVb-6AralKGc0NX90BqhNii9PboRdMHsMRFr_N_sIOhV7i8Y2MHU7tRp_OpOeVnkFf8AcelRZrAwv-NWldRtYtVhy0nZOhe4IlvMbKRJxryqi9LukCz_5XK-N0G0vMT5FvXt5WUEZFW08G9R5W2agcYy3psUu687JgHe_L6B6gomGW7DPTWlSOh7bqWNkG6whf4EklXs"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<p class="text-xs text-slate-custom text-center">JPG or PNG. Max 2MB.</p>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-custom">Full Name</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" type="text" value="Julian Vane"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-custom">Email Address</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" type="email" value="j.vane@vaneassociates.com"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-custom">Job Title</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" type="text" value="Senior Managing Partner"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Notifications Section -->
+<section class="tab-section hidden bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8" id="notifications">
+<div class="flex items-center gap-2 mb-6 text-navy-dark dark:text-slate-200">
+<span class="material-symbols-outlined text-primary">notifications</span>
+<h2 class="text-xl font-bold">Notifications Section</h2>
+</div>
+<p class="text-slate-custom">Notification preferences will appear here.</p>
+</section>
+<!-- Security Section -->
+<section class="tab-section hidden bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8" id="security">
+<div class="flex items-center gap-2 mb-6 text-navy-dark dark:text-slate-200">
+<span class="material-symbols-outlined text-primary">security</span>
+<h2 class="text-xl font-bold">Security Section</h2>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="font-bold text-navy-dark dark:text-slate-200 mb-4">Password Change</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-custom">Current Password</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-custom">New Password</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-custom">Confirm New</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-transparent focus:border-primary focus:ring-primary dark:text-slate-100" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<button class="mt-4 px-6 py-2 bg-navy-dark dark:bg-slate-800 text-white font-bold rounded-lg hover:bg-navy-dark/90 transition-colors text-sm">Update Password</button>
+</div>
+<div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div>
+<h3 class="font-bold text-navy-dark dark:text-slate-200">Two-factor Authentication</h3>
+<p class="text-sm text-slate-custom">Add an extra layer of security to your account.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="tab-section hidden bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8" id="team">
+<div class="flex items-center gap-2 mb-6 text-navy-dark dark:text-slate-200">
+<span class="material-symbols-outlined text-primary">group</span>
+<h2 class="text-xl font-bold">Team Section</h2>
+</div>
+<p class="text-slate-custom">Team management settings will appear here.</p>
+</section>
+<div class="flex justify-end gap-4 pb-12">
+<button class="px-8 py-3 rounded-xl border border-slate-300 dark:border-slate-700 font-bold text-navy-dark dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Discard Changes</button>
+<button class="px-10 py-3 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-0.5">Save All Settings</button>
+</div>
+</div>
+</main>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab-btn");
+        const sections = document.querySelectorAll(".tab-section");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // Remove active classes from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove("border-primary", "text-primary");
+                    t.classList.add("border-transparent", "text-slate-custom");
+                });
+
+                // Add active classes to the clicked tab
+                tab.classList.remove("border-transparent", "text-slate-custom");
+                tab.classList.add("border-primary", "text-primary");
+
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.add("hidden");
+                });
+
+                // Show the target section
+                const targetId = tab.getAttribute("data-target");
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove("hidden");
+                }
+            });
+        });
+    });
+</script>
+</body></html>
