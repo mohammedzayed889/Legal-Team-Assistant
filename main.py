@@ -116,11 +116,16 @@ class QueryModel(BaseModel):
 @app.post("/query", tags=["Querying"])
 @limiter.limit("5/minute")
 async def query_endpoint(request: Request, query_request: QueryModel):
-    """Answers a user's legal query using the mock LLM generation service."""
-    response = generate_response(query_request.query)
-    
-    return {
-        "status": "success",
-        "query": query_request.query,
-        "response": response
-    }
+    """Answers a user's legal query using Supabase retrieval and GPT-4o synthesis."""
+    try:
+        result = generate_response(query_request.query)
+        return {
+            "status": "success",
+            "query": query_request.query,
+            "answer": result["answer"],
+            "sources": result["sources"],
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=500, detail=f"Configuration error: {str(e)}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Query processing error: {str(e)}")

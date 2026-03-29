@@ -12,11 +12,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# IDE and Editor
-.vscode/
-.idea/
-*.swp
-*.swo
 
 # Project specific
 temp_uploads/
